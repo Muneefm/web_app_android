@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "806611614821",
+    "firebase_url": "https://textvext.firebaseio.com",
+    "project_id": "textvext",
+    "storage_bucket": "textvext.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806611614821:android:6dc9d572b0f909ac",
+        "android_client_info": {
+          "package_name": "com.mnf.textvext"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "806611614821-89u2gbttg6qvnkvkf1p0ckess3gjv324.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCb0bkSEnkaVtHjIAW6vlmSwlQG6niKnyg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

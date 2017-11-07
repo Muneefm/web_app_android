@@ -1,0 +1,138 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/colorPrimary"
+        app:title="@string/app_name"
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+    </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/appbar"
+        android:id="@+id/cnnt"
+        >
+
+    <!--    <android.support.v4.widget.SwipeRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swipeEventI"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"> -->
+        <WebView  xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/webview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            />
+
+
+
+
+   <!--     </android.support.v4.widget.SwipeRefreshLayout> -->
+
+
+        <FrameLayout
+            android:id="@+id/customViewContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone"
+            />
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/webCont"></FrameLayout>
+        <fr.castorflex.android.smoothprogressbar.SmoothProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:id="@+id/progressBarView"
+            android:visibility="gone"
+            android:indeterminate="true"
+            android:layout_alignParentTop="true"
+            />
+       <fr.castorflex.android.circularprogressbar.CircularProgressBar
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/progDet"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:cpb_colors="@array/colorsSmooth"
+            app:cpb_rotation_speed="2.0"
+            app:cpb_sweep_speed="1.0"
+            app:cpb_min_sweep_angle="10"
+            app:cpb_max_sweep_angle="300"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/errorCont"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text=":("
+                android:id="@+id/sadface"
+                android:textSize="50dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/grey600"
+                android:layout_below="@+id/sadface"
+                android:id="@+id/errorMsg"
+                android:text="Please check your Network Settings !"
+                android:textSize="15dp"
+                android:layout_marginTop="40dp"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/retryButton"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/errorMsg"
+                android:text="Retry"
+                />
+
+        </RelativeLayout>
+
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            android:visibility="gone"
+            ads:adUnitId="@string/banner_ad_unit_id">
+        </com.google.android.gms.ads.AdView>
+
+    </RelativeLayout>
+</RelativeLayout>

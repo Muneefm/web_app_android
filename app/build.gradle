@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        applicationId "com.mnf.textvext"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 4
+        versionName "3"
+    }
+    signingConfigs {
+           release {
+               storeFile file(MYAPP_RELEASE_STORE_FILE)
+               storePassword MYAPP_RELEASE_STORE_PASSWORD
+               keyAlias MYAPP_RELEASE_KEY_ALIAS
+               keyPassword MYAPP_RELEASE_KEY_PASSWORD
+           }
+       }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile files('libs/library-1.0.0-javadoc.jar')
+    compile 'me.relex:circleindicator:1.2.1@aar'
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support:design:25.1.0'
+    compile 'com.github.castorflex.smoothprogressbar:library:1.0.0'
+    compile 'com.github.castorflex.smoothprogressbar:library-circular:1.0.1'
+  //  compile 'com.thefinestartist:finestwebview:1.1.1'
+   // compile 'com.hkm.ezwebview:library:1.2.6'
+  //  compile 'com.pushbots:pushbots-lib:2.0.13@aar'
+    compile 'com.android.support:support-v13:25.1.0'
+   // compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha1'
+    compile 'com.google.firebase:firebase-core:9.4.0'
+    compile 'com.google.firebase:firebase-messaging:9.4.0'
+    compile 'com.google.firebase:firebase-ads:9.4.0'
+}
+
+apply plugin: 'com.google.gms.google-services'
+

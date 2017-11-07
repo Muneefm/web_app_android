@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/custom_color"
+    tools:context="com.appmaker.xyz.webapp.SplashScreen">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    >
+  <!--  <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/logo"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+
+        android:src="@mipmap/logo"
+        /> -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/splash_image"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:src="@drawable/spla"
+        />
+</LinearLayout>
+    <!-- android:scaleType="" -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text=  "@string/splash_text"
+        android:visibility="visible"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/grey700"
+        />
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TextVext</string>
+    <string name="banner_ad_unit_id"></string>
+
+
+    <string name="hello_world">!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_splash_screen"></string>
+    <string name="splash_text"> </string> <!-- Copyright ©  -->
+    <string name="title_activity_easy_webview"></string>
+    <string name="title_activity_slider">SliderActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+</resources>
